@@ -1,0 +1,35 @@
+//insert into candidate_info (job_id, role, yrs_of_Exp, salary, date_of_joining, company, skills) values (2004, 'Quality Control Specialist', 4, 21795.47, to_date('20200625','YYYYMMDD'), 'Centidel', 'Snowmobile');
+
+// CREATE TABLE Candidate_performa (
+
+Candidate_id integer NOT NULL PRIMARY KEY, 
+CV Varchar(50) NOT NULL,
+Skills varchar(500) NOT NULL,
+Exp_Salary numeric(50) NOT NULL,
+Interested_companies varchar(50) NOT NULL,
+
+)
+
+/////////
+CREATE TABLE Candidate_Info (
+
+Candidate_id integer NOT NULL PRIMARY KEY, 
+C_name Varchar(50) NOT NULL,
+City varchar(500) NOT NULL,
+ numeric(50) NOT NULL,
+Interested_companies varchar(50) NOT NULL,
+
+)
+
+
+
+
+
+
+insert into candidate_info (candidate_id, c_name, city, ph_no) values (8080, 'shreshth juneja', 'bangalore', 9009090872);
+insert into candidate_info (candidate_id, c_name, city, ph_no) values (8081, 'mohit jain', 'mumbai', 9283645365);
+insert into candidate_info (candidate_id, c_name, city, ph_no) values (8082, 'rajesh rana', 'delhi', 9283634546);
+insert into candidate_info (candidate_id, c_name, city, ph_no) values (8083, 'ed helms', 'kolkata', 2637453645);
+insert into candidate_info (candidate_id, c_name, city, ph_no) values (8084, 'jack chan', 'mumbai', 2543544555);
+insert into candidate_info (candidate_id, c_name, city, ph_no) values (8085, 'mohan jain', 'delhi', 4856475647);
+insert into candidate_info (candidate_id, c_name, city, ph_no) values (8086, 'rocky singh', 'indore', 9484957645);

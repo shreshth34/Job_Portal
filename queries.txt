@@ -20,7 +20,23 @@ City varchar(500) NOT NULL,
 Interested_companies varchar(50) NOT NULL,
 
 )
+create table candidate_info(
+candidate_id int not null primary key ,
+c_name varchar(30),
+username varchar(30),
+city varchar(30),
+phone numeric,
+password varchar(30) 
+)
 
+create table recruiter_info(
+recruiter_id serial ,
+r_name varchar(30),
+company varchar(30),
+email varchar(30),
+password varchar,
+access_key varchar(30) 
+)
 
 
 

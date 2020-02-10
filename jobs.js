@@ -102,14 +102,14 @@ async function add_Job_Posting(Job_Id1, Role1, yrs_of_Exp1, Salary1, Date_of_joi
 
 async function showJobforSkills(JSONfile){
 try{   
-        console.log(JSONfile)
 
+        console.log(JSONfile)
+ 
         const keysTrue = _.keys(_.pickBy(JSONfile))
         const valuesTrue = _.values(_.pickBy(JSONfile))
-        console.log(keysTrue[0]);
 
 
-        const checkJob = await client1.query(`SELECT * FROM job_postings AS jp where LOWER(jp.${keysTrue[0]}) = $1 AND jp.${keysTrue[1]} <= $2 AND jp.${keysTrue[2]} >= $3 AND ${keysTrue[3]} = $4 AND jp.${keysTrue[4]} = $5 AND LOWER(jp.${keysTrue[5]}) = $6;`,[valuesTrue[0],valuesTrue[1],valuesTrue[2],valuesTrue[3],valuesTrue[4],valuesTrue[5]]);    
+        const checkJob = await client1.query(`SELECT * FROM job_postings AS jp where LOWER(jp.${keysTrue[0]}) = $1 OR jp.${keysTrue[1]} <= $2 OR jp.${keysTrue[2]} >= $3 OR ${keysTrue[3]} = $4 OR jp.${keysTrue[4]} = $5 OR LOWER(jp.${keysTrue[5]}) = $6;`,[valuesTrue[0],valuesTrue[1],valuesTrue[2],valuesTrue[3],valuesTrue[4],valuesTrue[5]]);    
         console.log(checkJob.rows)
         return checkJob.rows;  
        

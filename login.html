@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login page</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+
+    <h1 align="center"><em> Job Portal </em> </h1>
+
+
+<div id="candidate_side">
+<h1><u>Candidate</u></h1>
+<div id="candidate_signup">
+    <form action="/submit-signup" method="post">
+       <h1> SignUp </h1>
+    Name: <input type="text" id="c_name" name="c_name" required>
+    Username: <input type="text" id= "username" name="username" required>
+    City:     <input type="text" id= "city" name="city" required>
+    Phone:    <input type="text" id= "phone" name="phone" required>
+    Password: <input type="password" id= "password" name="password" required>
+    <input type="submit" id= "signup-submit-btn">
+    </form>
+</div>
+
+<div id="candidate_login">
+    <h1>SignIn</h1>
+    <form action="/submit-login" method="post">
+    Username: <input type="text" id="username" name="username" required><br>
+    Password: <input type="password" id="password" name="password" required>
+    <input type="submit" id="login-signin-btn">
+    </form>
+</div>
+</div>
+<div id="recruiter_side">
+<h1><u> Recruiter </u> </h1>
+
+<div id="recruiter_signup">
+    <form action="/submit-rec-signup" method="post">
+       <h1> SignUp </h1>
+    Name: <input type="text" id="r_name" name="r_name" required>
+    Company: <input type="text" id= "company" name="company" required>
+    E-mail:     <input type="email" id= "email" name="email" required>
+    Password:    <input type="password" id= "password" name="password" required>
+    Access_key: <input type="text" id= "access_key" name="access_key" required>
+    <input type="submit" id= "signup-rec-btn-2">
+    </form>
+</div>
+
+<div id="recruiter_login">
+    <h1>SignIn</h1>
+    <form action="/submit-rec-signin" method="post">
+    E-mail: <input type="text" id="email" name="email" required><br>
+    Password: <input type="password" id="password" name="password" required>
+    <input type="submit" id="signin-rec-btn-2">
+    </form>
+</div>
+</div>
+
+</body>
+</html>

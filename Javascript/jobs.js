@@ -16,7 +16,6 @@ const client1 = new Client({
 
 })    
 
-
 app.use(express.static('/home/local/INTERNAL/shreshth.j/Desktop/codedamn/Job_Portal'))
 
 app.set('view engine', 'pug');
@@ -24,7 +23,6 @@ app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.use(bodyParser.json())
-
 
 app.get('/showJobPostings', async (req, res)=>{
 
@@ -34,12 +32,10 @@ app.get('/showJobPostings', async (req, res)=>{
 
 })
 
-
-app.post('/add_Job_Posting', async(req, res)=>{
+async function addJobP(req, res){
         try{
         await add_Job_Posting(req.body);
-        res.render('index', {title: 'Data Saved', message: 'Data saved successfully to job posting'})
-
+        res.send('Job posted successfully');
         }
         catch(e){
                 console.log("error is",e);
@@ -48,7 +44,7 @@ app.post('/add_Job_Posting', async(req, res)=>{
         const result1 = await showJobPostings();
         console.table(result1);
         }
-})
+}
 
 // app.post('/Candidate/showJobs', async(req, res)=>{
 //    try{
@@ -79,14 +75,10 @@ async function start(){
 
 async function showJobPostings(){
 try {
-
         const contents = await client1.query("select * from job_postings");
-        return contents.rows;
-        
+        return contents.rows;    
 } catch (e) {
-
         console.log(e)
-
 }
 }
 
@@ -95,7 +87,7 @@ async function add_Job_Posting(reqBody){
   try {
         console.log(reqBody)
         const addpost = await client1.query("insert into job_postings (job_id, role_id,salary,apply_till, yrs_of_exp,company,skill_id, city, recruiter_id) values ($1, $2, $3, $4, $5 ,$6, $7, $8, $9);", [reqBody.job_id, reqBody.role_id,reqBody.salary,reqBody.apply_till, reqBody.yrs_of_exp,reqBody.company,reqBody.skill_id, reqBody.city, reqBody.recruiter_id ]) ;    
-        return true;
+        return addpost;
         
 } catch (error) {
         console.log("some error",error);
@@ -122,6 +114,7 @@ async function add_Job_Posting(reqBody){
 // }
 
 module.exports=  {
-addJobs: add_Job_Posting
+addJobs: addJobP,
+showJobs: showJobPostings
 
 }

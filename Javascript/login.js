@@ -144,10 +144,11 @@ async function checkRecFromDatabase(getLData){
 
 }
 
-app.post('/add_Job_Posting',(req, res)=>{
+app.post('/add_Job_Posting',jobs.addJobs);
 
-    jobs.addJobs(req.body);
+// app.post('/showJobPostings',(req, res)=>{
 
+// jobs.showJobs();
 
-})
+// })
 

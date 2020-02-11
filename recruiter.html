@@ -4,22 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
     <title>Document</title>
+    
+    
 </head>
 <body>
 
-    <form action="/addJobPosting" method="post">
+    <div id="job_post_form">
+
+    <form action="/add_Job_Posting" method="post">
     <h1> Post a Job </h1>
-     job_id: <input type="text" id="job_id" name="job_id" required><br><br>
-     role: <input type="text" id= "role_id" name="role_id" required><br><br>
-     Salary:     <input type="text" id= "Salary" name="Salary" required><br><br>
-     Last Date to Apply: <input type="datetime-local" id="apply-till" name="apply_till"><br><br>
+     job_id: <input type="text" id="job_id" name="job_id"  required><br><br>
+     <div id="show roles available">
+     role: <input type="text" id= "role_id" name="role_id" required><br><br>   
+     </div>
+     Salary:     <input type="text" id= "salary" name="salary" required><br><br>
+     Last Date to Apply: <input type="datetime-local" id="apply_till" name="apply_till"><br><br>
      Experience: <input type="number" id="yrs_of_exp" name="yrs_of_exp"><br><br>
-     Company: <input type="text" 
+     Company: <input type="text" id="company" name="company"><br><br> 
+     Skill: <input type="text" id="skill" name="skill_id"><br><br>
+     City: <input type="text" id="city" name="city"><br><br>
+     Recruiter: <input type="text" id="recruiter_id" name="recruiter_id"><br><br>
      <input type="submit" id= "signup-submit-btn">
      </form>
-     <div>
-         <button>check roles available</button> 
      </div>
+     <script src="./Javascript/show-roles.js"> </script>
+
+     <div id="showAvailableRoles">
+        <button id="btn-roles"><span>Show Roles</span></button>
+       
+     </div>
+
 </body>
 </html>

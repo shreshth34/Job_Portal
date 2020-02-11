@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()   
 const bodyParser = require('body-parser')
+const path = require('path')
+const jobs = require('./jobs')
 
 const {Client} = require('pg')
 
@@ -15,19 +17,22 @@ const client3 = new Client({
 })
 //    return res.redirect('/UserHomePage');
 
-app.use(express.static('.'))
+app.use(express.static('/home/local/INTERNAL/shreshth.j/Desktop/codedamn/Job_Portal'))
 
-// app.set('view engine', 'pug');
+app.set('view engine', 'pug');
 
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.use(bodyParser.json())
 
 app.get('/', function(req, res){
-    res.sendFile('login.html', {root: __dirname})
+
+    res.sendFile('/home/local/INTERNAL/shreshth.j/Desktop/codedamn/Job_Portal/login.html'); 
+
 });
 
 app.post('/submit-signup', async (req, res)=>{
+    
     console.log(req.body);
     await sendTodatabase(req.body);
     res.render('index', {title: 'Data Saved', message: 'Data saved successfully'})
@@ -52,7 +57,7 @@ app.post('/submit-rec-signup', async (req, res)=>{
 
     console.log(req.body);
     await addRecruiterInfo(req.body);
-    res.render('index', {title:'recruiter data saved', message: ' welcome to our platform'});
+    res.render('index', {title:'recruiter data saved', message: ' welcome to our platform, Please Sign-in to continue'});
 
 })
 
@@ -74,7 +79,7 @@ app.post('/submit-rec-signin', async(req, res)=>{
 
 
 
-app.listen(3000);
+app.listen(3010);
 
 start();
 
@@ -139,9 +144,10 @@ async function checkRecFromDatabase(getLData){
 
 }
 
+app.post('/add_Job_Posting',(req, res)=>{
+
+    jobs.addJobs(req.body);
 
 
-
-
-
+})
 

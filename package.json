@@ -16,7 +16,8 @@
     "pg-promise": "^10.4.3",
     "postgres": "^1.0.2",
     "pug": "^2.0.4",
-    "redis": "^3.0.2"
+    "redis": "^3.0.2",
+    "requirejs": "^2.3.6"
   },
   "devDependencies": {
     "lodash": "^4.17.15",

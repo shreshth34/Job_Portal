@@ -1,0 +1,36 @@
+job_id: 
+501
+
+
+role: 
+400
+
+
+Salary: 
+45000
+
+
+Last Date to Apply: 
+20/06/2020, 13:45
+
+
+Experience: 
+4
+
+
+Company: 
+HP
+
+
+Skill: 
+2
+
+
+City: 
+hyderabad
+
+
+Recruiter: 
+20
+
+

@@ -18,7 +18,7 @@ const client = new Client({
     database: 'my_db'
 })
 
-// weShowRoles();
+weShowRoles();
 
 // document.getElementById('btn-roles').onclick =  
 // document.getElementById('showAvailableRoles').innerHTML = needRoles;   

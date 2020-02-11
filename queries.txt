@@ -9,6 +9,18 @@ Exp_Salary numeric(50) NOT NULL,
 Interested_companies varchar(50) NOT NULL,
 
 )
+//////////////////
+create table job_postings(
+job_id varchar(30) primary key,
+role_id int ,
+salary varchar(30),
+apply_till date,
+yrs_of_exp int,
+company varchar(30),
+skill_id int,
+city varchar(20),
+recruiter_id int,
+
 
 /////////
 CREATE TABLE Candidate_Info (

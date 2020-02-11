@@ -144,7 +144,7 @@ async function checkRecFromDatabase(getLData){
 
 }
 
-app.post('/add_Job_Posting',jobs.addJobs);
+app.post('/add_Job_Posting',jobs.addJobP);
 
 // app.post('/showJobPostings',(req, res)=>{
 

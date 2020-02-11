@@ -114,7 +114,7 @@ async function add_Job_Posting(reqBody){
 // }
 
 module.exports=  {
-addJobs: addJobP,
-showJobs: showJobPostings
+addJobP,
+showJobPostings
 
 }

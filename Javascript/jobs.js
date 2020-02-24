@@ -24,13 +24,18 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 app.use(bodyParser.json())
 
-app.get('/showJobPostings', async (req, res)=>{
+async function showJobP(req, res){
+try {
 
         const results = await showJobPostings();
-        console.table(results)
-        res.send("job postings on console");
+        return results.rows;
 
-})
+} catch (error) {
+
+        console.log(error)
+
+}
+}
 
 async function addJobP(req, res){
         try{
@@ -46,22 +51,7 @@ async function addJobP(req, res){
         }
 }
 
-// app.post('/Candidate/showJobs', async(req, res)=>{
-//    try{
-           
-//         var newJSON = req.body;
-        
-//         const bring = await showJobforSkills(newJSON);
-//         res.send(bring);
 
-//    }catch(e){
-
-//         console.log("Error",e)
-  
-// }
-// })
-
-// app.listen(3000, console.log("listening on 3000"));
 
 start();
 async function start(){
@@ -76,7 +66,7 @@ async function start(){
 async function showJobPostings(){
 try {
         const contents = await client1.query("select * from job_postings");
-        return contents.rows;    
+        return contents;    
 } catch (e) {
         console.log(e)
 }
@@ -94,27 +84,10 @@ async function add_Job_Posting(reqBody){
 }     
 }
 
-// async function showJobforSkills(JSONfile){
-// try{   
 
-//         console.log(JSONfile)
- 
-//         const keysTrue = _.keys(_.pickBy(JSONfile))
-//         const valuesTrue = _.values(_.pickBy(JSONfile))
-
-
-//         const checkJob = await client1.query(`SELECT * FROM job_postings AS jp where LOWER(jp.${keysTrue[0]}) = $1 OR jp.${keysTrue[1]} <= $2 OR jp.${keysTrue[2]} >= $3 OR ${keysTrue[3]} = $4 OR jp.${keysTrue[4]} = $5 OR LOWER(jp.${keysTrue[5]}) = $6;`,[valuesTrue[0],valuesTrue[1],valuesTrue[2],valuesTrue[3],valuesTrue[4],valuesTrue[5]]);    
-//         console.log(checkJob.rows)
-//         return checkJob.rows;  
-       
-//         }
-//         catch(e){
-//         }
-
-// }
 
 module.exports=  {
 addJobP,
-showJobPostings
+showJobP
 
 }

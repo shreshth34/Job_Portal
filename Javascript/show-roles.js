@@ -18,7 +18,6 @@ const client = new Client({
     database: 'my_db'
 })
 
-weShowRoles();
 
 // document.getElementById('btn-roles').onclick =  
 // document.getElementById('showAvailableRoles').innerHTML = needRoles;   
@@ -55,14 +54,15 @@ try
 
 })
 
+
+start();
+
 async function weShowRoles(){
 
     const gotResults = await getRolesdata();
-    console.log(gotResults.rows);    
+    return gotResults.rows; 
 
 }
-
-start();
 
 async function start(){
 try {
@@ -96,6 +96,7 @@ async function addRoleToTable(reqData){
 
 module.exports= {
     sendRoles: weShowRoles
+    
 }
 
 

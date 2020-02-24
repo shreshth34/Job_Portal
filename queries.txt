@@ -61,3 +61,184 @@ insert into candidate_info (candidate_id, c_name, city, ph_no) values (8083, 'ed
 insert into candidate_info (candidate_id, c_name, city, ph_no) values (8084, 'jack chan', 'mumbai', 2543544555);
 insert into candidate_info (candidate_id, c_name, city, ph_no) values (8085, 'mohan jain', 'delhi', 4856475647);
 insert into candidate_info (candidate_id, c_name, city, ph_no) values (8086, 'rocky singh', 'indore', 9484957645);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login page</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+
+    <h1 align="center"><em> Job Portal </em> </h1>
+
+<div class='container'>hi
+    <div id="candidate_side">
+        <h1><u>Candidate</u></h1>
+        <div id="candidate_signup">
+            <form action="/submit-signup" method="post">
+               <h1> SignUp </h1>
+            Name: <input type="text" id="c_name" name="c_name" required>
+            Username: <input type="text" id= "username" name="username" required>
+            City:     <input type="text" id= "city" name="city" required>
+            Phone:    <input type="text" id= "phone" name="phone" required>
+            Password: <input type="password" id= "password" name="password" required>
+            <input type="submit" id= "signup-submit-btn">
+            </form>
+        </div>
+        
+        <div id="candidate_login">
+            <h1>SignIn</h1>
+            <form action="/submit-login" method="post">
+            Username: <input type="text" id="username" name="username" required><br>
+            Password: <input type="password" id="password" name="password" required>
+            <input type="submit" id="login-signin-btn">
+            </form>
+        </div>
+        </div>
+</div>
+
+
+<div id="recruiter_side">
+<h1><u> Recruiter </u> </h1>
+
+<div id="recruiter_signup">
+    <form action="/submit-rec-signup" method="post">
+       <h1> SignUp </h1>
+    Name: <input type="text" id="r_name" name="r_name" required>
+    Company: <input type="text" id= "company" name="company" required>
+    E-mail:     <input type="email" id= "email" name="email" required>
+    Password:    <input type="password" id= "password" name="password" required>
+    Access_key: <input type="text" id= "access_key" name="access_key" required>
+    <input type="submit" id= "signup-rec-btn-2">
+    </form>
+</div>
+
+<div id="recruiter_login">
+    <h1>SignIn</h1>
+    <form action="/submit-rec-signin" method="post">
+    E-mail: <input type="text" id="email" name="email" required><br>
+    Password: <input type="password" id="password" name="password" required>
+    <input type="submit" id="signin-rec-btn-2">
+    </form>
+</div>
+</div>
+
+
+
+</body>
+</html>
+
+///////////////////////////////4///////////////////////////////////////////////////////6//////////////////////////9///////////////////////////////////////////////////
+
+
+ <h1 align="center"><em> Job Portal </em> </h1>
+
+<div class='container'>
+    
+        
+            
+        <form action="/submit-signup" method="post">
+            <h1><u>Candidate</u></h1>
+            <h2>SignUp </h2>
+            Name: <input type="text" id="c_name1" name="c_name1" required><br>
+            Username: <input type="text" id= "username1" name="username1" required><br>
+            City:     <input type="text" id= "city1" name="city1" required><br>
+            Phone:    <input type="text" id= "phone1" name="phone1" required><br>
+            Password: <input type="password" id= "password1" name="password1" required><br>
+            <input type="submit" id= "signup-submit-btn">
+            </form>
+        
+        
+            <form action="/submit-login" method="post">
+                <h1><u>Candidate</u></h1>
+                <h2> SignIn</h2>
+            Username: <input type="text" id="username2" name="username2" required><br>
+            Password: <input type="password" id="password2" name="password2" required><br> 
+            <input type="submit" id="login-signin-btn">
+            </form>
+    
+
+
+
+    <form action="/submit-rec-signup" method="post">
+        <h1><u>Recruiter</u></h1>
+        <h2>SignUp </h2>
+    Name: <input type="text" id="r_name3" name="r_name3" required><br>
+    Company: <input type="text" id= "company3" name="company3" required><br>
+    E-mail:     <input type="email" id= "email3" name="email3" required><br>
+    Password:    <input type="password" id= "password3" name="password3" required><br>
+    Access_key: <input type="text" id= "access_key3" name="access_key3" required><br>
+    <input type="submit" id= "signup-rec-btn-2">
+    </form>
+
+
+     
+    <form action="/submit-rec-signin" method="post">
+        <h1><u>Recruiter</u></h1>
+        <h2> SignIn</h2>
+    E-mail: <input type="text" id="email" name="email2" required><br>
+    Password: <input type="password" id="password" name="password2" required><br>
+    <input type="submit" id="signin-rec-btn-2">
+    </form>
+
+    </div>
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\||__||/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ <h1 align="center"><em> Job Portal </em> </h1>
+
+<div class='container'>
+    
+        
+            
+        <form action="/submit-signup" method="post">
+            <h1><u>Candidate</u></h1>
+            <h2>SignUp </h2>
+            Name: <input type="text" id="c_name1" name="c_name1" required><br>
+            Username: <input type="text" id= "username1" name="username1" required><br>
+            City:     <input type="text" id= "city1" name="city1" required><br>
+            Phone:    <input type="text" id= "phone1" name="phone1" required><br>
+            Password: <input type="password" id= "password1" name="password1" required><br>
+            <input type="submit" id= "signup-submit-btn">
+            </form>
+        
+        
+            <form action="/submit-login" method="post">
+                <h1><u>Candidate</u></h1>
+                <h2> SignIn</h2>
+            Username: <input type="text" id="username2" name="username2" required><br>
+            Password: <input type="password" id="password2" name="password2" required><br> 
+            <input type="submit" id="login-signin-btn">
+            </form>
+    
+
+
+
+    <form action="/submit-rec-signup" method="post">
+        <h1><u>Recruiter</u></h1>
+        <h2>SignUp </h2>
+    Name: <input type="text" id="r_name3" name="r_name3" required><br>
+    Company: <input type="text" id= "company3" name="company3" required><br>
+    E-mail:     <input type="email" id= "email3" name="email3" required><br>
+    Password:    <input type="password" id= "password3" name="password3" required><br>
+    Access_key: <input type="text" id= "access_key3" name="access_key3" required><br>
+    <input type="submit" id= "signup-rec-btn-2">
+    </form>
+
+
+     
+    <form action="/submit-rec-signin" method="post">
+        <h1><u>Recruiter</u></h1>
+        <h2> SignIn</h2>
+    E-mail: <input type="text" id="email" name="email2" required><br>
+    Password: <input type="password" id="password" name="password2" required><br>
+    <input type="submit" id="signin-rec-btn-2">
+    </form>
+
+    </div>

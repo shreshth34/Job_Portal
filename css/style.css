@@ -1,52 +1,7 @@
-
-#candidate_signup    {
-    width: 200px;
-    height: 400px;
-    float: left;
-}
-
-#candidate_login  {
-    width: 200px;
-    height: 400px;
-    margin-top: 42px;
-    margin-left: 200px;
-    position: relative;
-}
-
-#candidate_side{
-    float:right; 
-    width:180px; 
-    height:160px; 
-    background-color:white;
-    margin-right: 690px ;
-    margin-top: 100px
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 
-}
 
-#recruiter_side{
-    float:left; 
-    width:180px; 
-    height:160px; 
-    background-color:white;
-    margin-left: 490px ;
-    margin-top: 100px
-
-
-}
-
-#recruiter_signup    {
-    width: 200px;
-    height: 400px;
-    float: left;
-}
-
-#recruiter_login  {
-    width: 200px;
-    height: 400px;
-    margin-top: 42px;
-    margin-left: 200px;
-}
 
 #btn-roles {
     border-radius: 4px;
@@ -90,17 +45,50 @@
     right: 0;
   }
 
-  input[type=text] {
-    transition: width 0.4s ease-in-out;
-  }
+
+input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
   
-  input[type=text]:focus {
-    width: 80%;
-  }
 
   #job_post_form{
     width:300px;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
 
+  body{
+    background: #1a2a6c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Montserrat', s	ans-serif;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:200vh;
+    margin: 220px 0 50px;
+  }
 
+  .container{
 
+    background: white;
+    box-shadow: 0 14px 28px white, white
+
+  }
+  
+  form{
+
+    background: #fff; 
+    padding: 20px 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
   }

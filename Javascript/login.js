@@ -46,7 +46,7 @@ app.post('/submit-login', async(req,res)=>{
     
     if(getResult.rows[0].exists)
     {   
-        res.render('index',{title:'Welcome to Home page', message: 'Hi there user, welcome to homepage'});
+        res.redirect('candidate.html');
 
     }else{
         res.render('index',{title:'Error', message: 'Username or password doesn\'t exist'});
@@ -77,9 +77,7 @@ app.post('/submit-rec-signin', async(req, res)=>{
 
 })
 
-
-
-app.listen(3010);
+app.listen(3050, console.log("app connected on 3050"));
 
 start();
 
@@ -98,11 +96,10 @@ async function connect(){
     }
 }
 
-
 async function sendTodatabase(getData){
 
     try {
-        const SignupInfo = client3.query("insert into candidate_info( c_name, username, city, phone, password ) values ($1, $2, $3, $4, $5);",[getData.c_name, getData.username, getData.city, getData.phone, getData.password])
+        const SignupInfo = client3.query("insert into candidate_info( c_name, username, city, phone, password ) values ($1, $2, $3, $4, $5);",[getData.c_name1, getData.username1, getData.city1, getData.phone1, getData.password1])
         return true;
     } catch (error) {
                 
@@ -113,7 +110,7 @@ async function sendTodatabase(getData){
 async function checkFromDatabase(getLData){
 
     try {
-        const loginInfo  = await client3.query("SELECT EXISTS(SELECT * from candidate_info WHERE username=$1 AND password=$2);",[getLData.username, getLData.password]).then((result)=>{return result});
+        const loginInfo  = await client3.query("SELECT EXISTS(SELECT * from candidate_info WHERE username=$1 AND password=$2);",[getLData.username4, getLData.password4]).then((result)=>{return result});
         return loginInfo;
     } catch (error) {
         
@@ -124,19 +121,18 @@ async function checkFromDatabase(getLData){
 async function addRecruiterInfo(getRData){
 
     try {
-        const loginInfo = await client3.query("Insert into recruiter_info(r_name, company,  email, password, access_key) values($1, $2, $3, $4, $5);",[getRData.r_name,getRData.company, getRData.email, getRData.password, getRData.access_key])
+        console.log("getHere again: ",getRData)
+        const loginInfo = await client3.query("Insert into recruiter_info(r_name, company,  email, password, access_key) values($1, $2, $3, $4, $5);",[getRData.r_name3,getRData.company3, getRData.email3, getRData.password3, getRData.access_key3])
         return true;
         } catch (error) {
         
     }
 }
 
-
-
 async function checkRecFromDatabase(getLData){
 
     try {
-        const logIt  = await client3.query("SELECT EXISTS(SELECT * from recruiter_info WHERE email=$1 AND password=$2);",[getLData.email, getLData.password]).then((result)=>{return result});
+        const logIt  = await client3.query("SELECT EXISTS(SELECT * from recruiter_info WHERE email=$1 AND password=$2);",[getLData.email2, getLData.password2]).then((result)=>{return result});
         return logIt;
     } catch (error) {
         

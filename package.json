@@ -20,7 +20,7 @@
     "requirejs": "^2.3.6"
   },
   "devDependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "multer": "^1.4.2"
   }
 }
